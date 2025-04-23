@@ -8,5 +8,10 @@
     "puppeteer": "^24.4.0",
     "puppeteer-core": "^24.4.0",
     "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.37.0",
+    "@html-eslint/parser": "^0.37.0",
+    "eslint": "^9.24.0"
   }
 }
