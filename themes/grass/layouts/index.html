@@ -1,4 +1,4 @@
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
 
   <header class="hero-section grass-bg-image banner">
     <div class="fixed-top">
@@ -11,12 +11,16 @@
     </div>
     <section class="pt-3 mt-95">
         <div class="container">
-        <div class="row">
+          <div class="row">
             <div class="col-lg-8 text-center mx-auto">
-            <h1 class="mb-0"><img alt="GRASS" src="{{.Site.BaseURL}}/images/logos/grass-white.svg" width="26%"></h1>{{ with .Site.Params.banner.description }}
-            <p class="text-bold mb-4">{{ . }}</p>{{ end }}
+                <h1 class="mb-0"><img alt="GRASS" src="{{.Site.BaseURL}}/images/logos/grass-white.svg" width="26%"></h1>
+                {{ with .Site.Params.banner.description }}
+                <p class="text-bold mb-4">
+                    {{ . }}
+                </p>
+                {{ end }}
             </div>
-        </div>
+          </div>
         </div>
     </section>
   </header>
@@ -100,14 +104,14 @@
         <div class="col-lg-6">
             <div class="bg-white" id="news">
                 <div class="row justify-content-center pd-40 mb-40">
-                    <main role="main">
+                    <article>
                         <h2 class="section-gtitle mb-4">Latest news</h2>{{ range first 3 (where .Site.Pages "Section" "news").ByDate.Reverse}}
                         <h3 class="entry-title" itemprop="headline"><a class="nws" href="{{.RelPermalink}}">{{ .Title }}</a></h3>
 		        <span class="entry-meta"> <time itemprop="datePublished" datetime='{{ .Date.Format "2006-01-02" }}'><i class="fa fa-calendar"></i> {{ .Date.Format "January 02, 2006" }}</time></span>{{ end }}
                         <div class="row justify-content-center pd-40">
                             <a class="btn btn-primary dbl" href="{{.Site.BaseURL}}/news">View All</a>
                         </div>
-                    </main>
+                    </article>
                 </div>
             </div>
         </div>
@@ -127,4 +131,5 @@
     </div>
 
 </div>
-  </section>{{ partial "footer.html" . }}
+</section>
+{{ partial "footer.html" . }}
