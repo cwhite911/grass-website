@@ -80,41 +80,41 @@
         case "Windows":
             button.text("Download for Windows");
             button.data("os", "windows");
-            $('#downloadTab a[href="#windows"]').tab('show');
-            if (window.location.pathname === "/download/") {
-              history.replaceState(null, null, "#windows");
+            $('#downloadTab a[href="windows"]').tab('show');
+            if (window.location.pathname === "/download") {
+              history.replaceState(null, null, "windows");
             }
             break;
         case "macOS":
             button.text("Download for macOS");
             button.data("os", "mac");
-            $('#downloadTab a[href="#mac"]').tab('show');
-            if (window.location.pathname === "/download/") {
-              history.replaceState(null, null, "#mac");
+            $('#downloadTab a[href="download?tab=mac]').tab('show');
+            if (window.location.pathname === "/download") {
+              history.replaceState(null, null, "mac");
             }
             break;
         case "Linux":
             button.text("Download for Linux");
             button.data("os", "linux");
-            $('#downloadTab a[href="#linux"]').tab('show');
-            if (window.location.pathname === "/download/") {
-              history.replaceState(null, null, "#linux");
+            $('#downloadTab a[href="download?tab=linux"]').tab('show');
+            if (window.location.pathname === "/download") {
+              history.replaceState(null, null, "?tab=linux");
             }
             break;
         case "Docker":
             button.text("Docker Container");
             button.data("os", "docker");
-            $('#downloadTab a[href="#docker"]').tab('show');
-            if (window.location.pathname === "/download/") {
-              history.replaceState(null, null, "#docker");
+            $('#downloadTab a[href="docker"]').tab('show');
+            if (window.location.pathname === "/download") {
+              history.replaceState(null, null, "docker");
             }
             break;
         case "Source Code":
               button.text("Source Code");
               button.data("os", "source");
               $('#downloadTab a[href="#source"]').tab('show');
-              if (window.location.pathname === "/download/") {
-                history.replaceState(null, null, "#source");
+              if (window.location.pathname === "/download") {
+                history.replaceState(null, null, "source");
               }
               break;
         default:
